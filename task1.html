@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function submit() {
+            var input = document.getElementById("sentences").value
+            input = input.split(" ")
+            let num = 0
+            for(let i=0; i<input.length; i++){
+                if(input[i].length>num){
+                    num=input[i].length
+                }
+            }
+            let ans
+            for(j=0; j<input.length; j++){
+                if(input[j].length === num){
+                    ans=input[j]
+                }
+            }
+            alert(ans)
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label>Input text</label>
+        <input type="text" id="sentences">
+        <button onclick="submit()">find</button>
+    </div>
+</body>
+</html>
